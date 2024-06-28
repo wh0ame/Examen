@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заявки</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<form name="regForm">
+    <header id="form-header">
+        <h1>Оформление заявки</h1>
+    </header>
+
+    <section id="form-fields">
+        <div class="form-field">
+            <label>Имя</label>
+            <input type="text" name="firstname" placeholder="Иван" />
+
+            <p class="error" name="length">Длина имени должна быть больше 3</p>
+            <p class="error" name="alphabet">Имя должно содержать только кириллицу</p>
+        </div>
+        <div class="form-field">
+            <label>Фамилия</label>
+            <input type="text" name="lastname" placeholder="Иванов" />
+
+            <p class="error" name="length">Длина фамилии должна быть больше 4</p>
+            <p class="error" name="alphabet">Фамилия должна содержать только кириллицу</p>
+        </div>
+          <div class="form-field">
+            <label>Отчество</label>
+            <input type="text" name="patronymic" placeholder="Иванович" />
+
+            <p class="error" name="length">Длина отчества должна быть больше 6</p>
+            <p class="error" name="alphabet">Отчество должно содержать только кириллицу</p>
+        </div>
+          <div class="form-field">
+            <label>Телефон</label>
+            <input type="tel" name="phone" placeholder="712345678910" />
+
+            <p class="error" name="length">Неверно введен номер телефона</p>
+            <p class="error" name="numbers">Телефон не может содержать буквы</p>
+        </div>
+        <div class="form-field">
+            <label>Почта</label>
+            <input type="email" name="email" placeholder="lalala@gmail.com" />
+
+            <p class="error" name="emailError">Введите почту правильно</p>
+        </div>
+          <div class="form-field">
+            <label>Дата начала аренды</label>
+            <input type="date" name="date" min="2024-06-28" max="2024-07-28" />
+
+            <p class="error" name="dateError">Выберите корректную дату</p>
+        </div>
+        <div class="form-field">
+          <label>Время аренды в днях</label>
+          <select id="product" required>
+            <option value="">Кол-во дней</option>
+            <option value="product1">1</option>
+            <option value="product2">2</option>
+            <option value="product3">3</option>
+            <option value="product1">4</option>
+            <option value="product2">5</option>
+            <option value="product3">6</option>
+            <option value="product3">7</option>
+          </select>
+          <p class="error" name="dateError">Выберите корректную дату</p>
+      </div>
+    </section>
+
+    <button>Оставить заявку</button>
+</form>
+
+<div id="modal">
+    <h1>Все ок!</h1>
+</div>
+
+<script src="./script.js"></script>
+</body>
+
+</html>
